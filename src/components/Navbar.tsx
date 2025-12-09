@@ -1,19 +1,21 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Resume", href: "#resume" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Projects", href: "/projects" },
+  { label: "Resume", href: "/resume" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,27 +35,35 @@ export function Navbar() {
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <a
-          href="#home"
+        <Link
+          to="/"
           className="text-xl font-bold text-primary hover:text-accent transition-colors"
         >
           KJ<span className="text-accent">.</span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors relative group"
+              to={link.href}
+              className={cn(
+                "text-sm font-medium transition-colors relative group",
+                location.pathname === link.href
+                  ? "text-primary"
+                  : "text-muted-foreground hover:text-primary"
+              )}
             >
               {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full" />
-            </a>
+              <span className={cn(
+                "absolute -bottom-1 left-0 h-0.5 bg-accent transition-all duration-300",
+                location.pathname === link.href ? "w-full" : "w-0 group-hover:w-full"
+              )} />
+            </Link>
           ))}
           <Button variant="accent" size="sm" asChild>
-            <a href="#contact">Let's Talk</a>
+            <Link to="/contact">Let's Talk</Link>
           </Button>
         </div>
 
@@ -75,19 +85,24 @@ export function Navbar() {
       >
         <div className="container mx-auto px-4 flex flex-col gap-4">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
-              href={link.href}
-              className="text-base font-medium text-muted-foreground hover:text-primary transition-colors py-2"
+              to={link.href}
+              className={cn(
+                "text-base font-medium transition-colors py-2",
+                location.pathname === link.href
+                  ? "text-primary"
+                  : "text-muted-foreground hover:text-primary"
+              )}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
           <Button variant="accent" size="sm" className="w-fit" asChild>
-            <a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
+            <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>
               Let's Talk
-            </a>
+            </Link>
           </Button>
         </div>
       </div>
