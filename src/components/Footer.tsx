@@ -1,4 +1,5 @@
 import { Heart, Github, Linkedin, Mail, ArrowUp, Facebook, Instagram, MessageCircle, Send } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
@@ -84,7 +85,7 @@ export function Footer() {
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary via-accent to-primary p-0.5 shadow-lg">
                   <div className="w-full h-full rounded-xl bg-background flex items-center justify-center">
                     <img
-                      src="/logo.svg"
+                      src="/portfolio/logo.svg"
                       alt="JM Logo"
                       className="w-full h-full object-contain p-2"
                     />
@@ -106,15 +107,21 @@ export function Footer() {
                 Quick Links
               </h3>
               <div className="flex flex-col gap-3">
-                {["Home", "About", "Projects", "Resume", "Contact"].map((link) => (
-                  <a
-                    key={link}
-                    href={`#${link.toLowerCase()}`}
+                {[
+                  { label: "Home", path: "/" },
+                  { label: "About", path: "/about" },
+                  { label: "Projects", path: "/projects" },
+                  { label: "Resume", path: "/resume" },
+                  { label: "Contact", path: "/contact" }
+                ].map((link) => (
+                  <Link
+                    key={link.label}
+                    to={link.path}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors hover:translate-x-1 inline-flex items-center gap-2 group"
                   >
                     <span className="w-0 h-px bg-primary group-hover:w-4 transition-all duration-300" />
-                    {link}
-                  </a>
+                    {link.label}
+                  </Link>
                 ))}
               </div>
             </div>

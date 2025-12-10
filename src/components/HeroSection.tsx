@@ -49,7 +49,7 @@ export function HeroSection() {
             <div className="w-36 h-36 mx-auto rounded-full bg-gradient-hero p-1 shadow-elevated hover:scale-105 transition-transform duration-300">
               <div className="w-full h-full rounded-full bg-gradient-to-br from-background to-secondary backdrop-blur flex items-center justify-center border-4 border-background overflow-hidden">
                 <img
-                  src="/logo.svg"
+                  src="/portfolio/logo.svg"
                   alt="Josophat Makawa Logo"
                   className="w-full h-full object-contain p-2"
                 />
