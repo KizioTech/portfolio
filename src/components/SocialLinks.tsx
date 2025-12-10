@@ -1,40 +1,46 @@
-import { Github, Linkedin, Facebook, Instagram, Mail, MessageCircle } from "lucide-react";
+import { Github, Linkedin, Facebook, Instagram, Mail, MessageCircle, Send} from "lucide-react";
 
 const socialLinks = [
   {
     platform: "GitHub",
-    url: "#",
+    url: "https://github.com/KizioTech",
     icon: Github,
     color: "hover:bg-[#333] hover:text-primary-foreground",
   },
   {
     platform: "LinkedIn",
-    url: "#",
+    url: "https://www.linkedin.com/in/josophat-makawa-abaa21366/",
     icon: Linkedin,
     color: "hover:bg-[#0077B5] hover:text-primary-foreground",
   },
   {
     platform: "Facebook",
-    url: "#",
+    url: "https://web.facebook.com/josophat.chifundo.makawa",
     icon: Facebook,
     color: "hover:bg-[#1877F2] hover:text-primary-foreground",
   },
   {
     platform: "Instagram",
-    url: "#",
+    url: "https://www.instagram.com/kiziojosh/",
     icon: Instagram,
     color: "hover:bg-gradient-to-br hover:from-[#833AB4] hover:via-[#FD1D1D] hover:to-[#F77737] hover:text-primary-foreground",
   },
   {
     platform: "WhatsApp",
-    url: "#",
+    url: "https://wa.me/265999978828",
     icon: MessageCircle,
     color: "hover:bg-[#25D366] hover:text-primary-foreground",
   },
   {
     platform: "Email",
-    url: "mailto:your@email.com",
+    url: "mailto:makawacean6@gmail.com",
     icon: Mail,
+    color: "hover:bg-accent hover:text-accent-foreground",
+  },
+  {
+    platform: "Telegram",
+    url: "https://t.me/KizioJosh",
+    icon: Send,
     color: "hover:bg-accent hover:text-accent-foreground",
   },
 ];

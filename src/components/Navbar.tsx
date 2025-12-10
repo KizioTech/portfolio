@@ -37,9 +37,20 @@ export function Navbar() {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link
           to="/"
-          className="text-xl font-bold text-primary hover:text-accent transition-colors"
+          className="flex items-center gap-2 group"
         >
-          KJ<span className="text-accent">.</span>
+          <div className="w-10 h-10 rounded-lg bg-gradient-hero p-0.5 shadow-soft group-hover:shadow-accent transition-all duration-300">
+            <div className="w-full h-full rounded-lg bg-background flex items-center justify-center">
+              <img
+                src="/logo.svg"
+                alt="JM Logo"
+                className="w-full h-full object-contain p-1"
+              />
+            </div>
+          </div>
+          <span className="text-xl font-bold text-primary group-hover:text-accent transition-colors">
+            Josophat<span className="text-accent">.</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

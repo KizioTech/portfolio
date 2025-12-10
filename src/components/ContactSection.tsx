@@ -67,7 +67,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="font-medium text-foreground">Malawi</p>
+                    <p className="font-medium text-foreground">Zomba, Malawi</p>
                   </div>
                 </div>
 
@@ -78,7 +78,7 @@ export function ContactSection() {
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
                     <p className="font-medium text-foreground">
-                      contact@kiziojosh.com
+                      makawacean6@gmail.com
                     </p>
                   </div>
                 </div>
@@ -90,7 +90,7 @@ export function ContactSection() {
                   <div>
                     <p className="text-sm text-muted-foreground">Phone</p>
                     <p className="font-medium text-foreground">
-                      Available on request
+                      +265 999 978 828
                     </p>
                   </div>
                 </div>

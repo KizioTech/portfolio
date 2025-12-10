@@ -13,7 +13,7 @@ const skills = [
 const education = [
   {
     institution: "University of Malawi",
-    program: "BSc in Mathematics",
+    program: "Bachelor of Science in Mathematics",
     year: "Current",
     description: "Focused on pure and applied mathematics with emphasis on data analysis and cryptography.",
   },
@@ -23,7 +23,7 @@ const skillCategories = [
   {
     title: "Technical Skills",
     icon: Code,
-    items: ["React", "JavaScript", "Python", "HTML/CSS", "LaTeX", "SPSS"],
+    items: ["React", "JavaScript", "Python", "HTML/CSS", "LaTeX","Matlab", "SPSS","Excel","Stata", "PowerBI"],
   },
   {
     title: "Soft Skills",
