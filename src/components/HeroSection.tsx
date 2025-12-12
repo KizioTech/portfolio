@@ -98,19 +98,19 @@ export function HeroSection() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-600">
             <Button variant="hero" size="lg" asChild className="group">
-              <a href="#projects">
+              <a href="/projects">
                 <Code2 className="mr-2 group-hover:rotate-12 transition-transform" size={18} />
                 View Projects
               </a>
             </Button>
             <Button variant="outline" size="lg" asChild className="group">
-              <a href="#resume">
+              <a href="/resume">
                 <Download className="mr-2 group-hover:translate-y-1 transition-transform" size={18} />
                 Download CV
               </a>
             </Button>
             <Button variant="ghost" size="lg" asChild className="group">
-              <a href="#contact">
+              <a href="/contact">
                 <PenTool className="mr-2 group-hover:scale-110 transition-transform" size={18} />
                 Get in Touch
               </a>
@@ -121,7 +121,7 @@ export function HeroSection() {
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-700">
           <a
-            href="#about"
+            href="/about"
             className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-all duration-300 group"
           >
             <span className="text-xs font-medium uppercase tracking-widest group-hover:tracking-wider transition-all">
