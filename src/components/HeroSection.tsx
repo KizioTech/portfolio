@@ -118,18 +118,6 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-700">
-          <a
-            href="/portfolio/about"
-            className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-all duration-300 group"
-          >
-            <span className="text-xs font-medium uppercase tracking-widest group-hover:tracking-wider transition-all">
-              Explore More
-            </span>
-            <ArrowDown size={20} className="animate-bounce group-hover:translate-y-1 transition-transform" />
-          </a>
-        </div>
       </div>
     </section>
   );
