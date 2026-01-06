@@ -131,7 +131,7 @@ export function ResumeSection() {
                   className="w-full"
                   asChild
                 >
-                  <a href="/makawaj.pdf" download>
+                  <a href="/portfolio/makawaj.pdf" download>
                     <Download size={18} />
                     Download CV
                   </a>
